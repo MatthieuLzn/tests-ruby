@@ -22,19 +22,19 @@ end
 
 describe "sum" do
   it "computes the sum of an empty array" do
-    expect(sum([])).to eq(0)
+    expect(sum()).to eq(0)
   end
 
   it "computes the sum of an array of one number" do
-    expect(sum([7])).to eq(7)
+    expect(sum(7)).to eq(7)
   end
 
   it "computes the sum of an array of two numbers" do
-    expect(sum([7,11])).to eq(18)
+    expect(sum(7,11)).to eq(18)
   end
 
   it "computes the sum of an array of many numbers" do
-    expect(sum([1,3,5,7,9])).to eq(25)
+    expect(sum(1,3,5,7,9)).to eq(25)
   end
 end
 
@@ -47,23 +47,41 @@ describe "#multiply" do
     expect(multiply(3, 4)).to eq(12)
   end
 
-  it "multiplies two other numbers"
+  it "multiplies two other numbers" do
+    expect(multiply(10,15)).to eq(150)
+  end
     # one other test here, don't forget do end ;)
 
-  it "multiplies two other numbers, one of them being 0"
-    # one last test, with 0 in it
-
+  it "multiplies two other numbers, one of them being 0" do
+    expect(multiply(18,0)).to eq(0)
+  end
 end
 
 describe "#power" do
-  it "raises one number to the power of another number"
+  it "raises one number to the power of another number" do
+    expect(power(5,2)).to eq(25)
+  end
+
+  it "raises another number to the power of another number" do
+    expect(power(18,7)).to eq(612220032)
+  end
 end
 
 # http://en.wikipedia.org/wiki/Factorial
 describe "#factorial" do
-  it "computes the factorial of 0"
-  it "computes the factorial of 1"
-  it "computes the factorial of 2"
-  it "computes the factorial of 5"
-  it "computes the factorial of 10"
+  it "computes the factorial of 0" do
+    expect(factorial(0)).to eq(1)
+  end
+  it "computes the factorial of 1" do
+    expect(factorial(1)).to eq(1)
+  end
+  it "computes the factorial of 2" do
+    expect(factorial(2)).to eq(2)
+  end
+  it "computes the factorial of 5" do
+    expect(factorial(5)).to eq(120)
+  end
+  it "computes the factorial of 10" do
+    expect(factorial(10)).to eq(3628800)
+  end
 end
