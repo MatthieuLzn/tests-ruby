@@ -8,18 +8,18 @@ describe "#translate" do
   end
 
   it "translates a word beginning with a consonant" do
-    s = translate("banana")
-    expect(s).to eq("ananabay")
+    s = translate("bananab")
+    expect(s).to eq("bananabay")
   end
 
   it "translates a word beginning with two consonants" do
-    s = translate("cherry")
-    expect(s).to eq("errychay")
+    s = translate("cherrych")
+    expect(s).to eq("cherrychay")
   end
 
   it "translates two words" do
     s = translate("eat pie")
-    expect(s).to eq("eatay iepay")
+    expect(s).to eq("eatay piepay")
   end
 
   it "translates a word beginning with three consonants" do

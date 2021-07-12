@@ -1,7 +1,5 @@
 def who_is_bigger(a, b, c)
     number = a, b, c
-    if number == nil
-        puts "Nil detected"
     return max = number.max_by{|x| x}
 end
 
@@ -16,10 +14,7 @@ end
 
 def magic_array(array)
 
-    array.flatten.sort.each {|n| n * 2} 
-        
-
+    #array.flatten.sort.reject{|a| a % 3 == 0}.each {|n| n * 2} 
+    return array.flatten.sort.uniq.reject{|a| a % 3 == 0}.map{|e| e * 2 if e.is_a? Numeric}
+    
 end
-
-#le rspec marche plus
- 
